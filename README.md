@@ -1,6 +1,11 @@
 
 
-![Python](https://img.shields.io/badge/Python-3.10-3776AB?style=flat&logo=python&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=flat&logo=python&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-App-FF4B4B?style=flat&logo=streamlit&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-150458?style=flat&logo=pandas&logoColor=white)
+![Windows](https://img.shields.io/badge/Platform-Windows-0078D6?style=flat&logo=windows&logoColor=white)
+![Send2Trash](https://img.shields.io/badge/Send2Trash-Recycle%20Bin-4CAF50?style=flat)
+![OpenPyXL](https://img.shields.io/badge/OpenPyXL-Excel%20Export-107C41?style=flat)
 ![License](https://img.shields.io/badge/License-MIT-green?style=flat)
 
 
