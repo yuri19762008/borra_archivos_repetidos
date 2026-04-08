@@ -484,7 +484,7 @@ def render_header() -> None:
     st.title("📁 Comparador de carpetas en Windows")
     st.markdown(
         """
-        Desarrollado por Yuri Octavio Urzua Lebuy.
+        Creado por **Yuri Urzua Lebuy** | [GitHub](https://github.com/yuri19762008) 
         """
         """
         Esta aplicación compara dos carpetas, detecta archivos duplicados y permite limpiar duplicados de forma segura.
@@ -547,60 +547,6 @@ def render_export_buttons(df: pd.DataFrame) -> None:
 # Traduce el identificador del modo de acción a una etiqueta legible.
 def get_action_label(action_mode: str) -> str:
     return "Mover a la Papelera de reciclaje" if action_mode == "recycle_bin" else "Eliminar definitivamente"
-
-
-
-
-# Footer fijo con estilo profesional para mostrar nombre de la app,
-# versión, autor y enlace a GitHub.
-def render_footer() -> None:
-    st.markdown(
-        """
-        <style>
-            footer {visibility: hidden;}
-            .main > div {padding-bottom: 95px;}
-
-            .custom-footer {
-                position: fixed;
-                bottom: 0;
-                left: 0;
-                width: 100%;
-                background: #111827;
-                color: #F3F4F6;
-                border-top: 1px solid rgba(255,255,255,0.10);
-                padding: 12px 20px;
-                text-align: center;
-                z-index: 999999;
-                box-shadow: 0 -3px 10px rgba(0,0,0,0.15);
-            }
-
-            .custom-footer a {
-                color: #34D399;
-                text-decoration: none;
-                font-weight: 600;
-            }
-
-            .custom-footer a:hover {
-                text-decoration: underline;
-            }
-
-            @media (max-width: 768px) {
-                .main > div {padding-bottom: 120px;}
-                .custom-footer {font-size: 12px;}
-            }
-        </style>
-
-        <div class="custom-footer">
-            <strong>Comparador de carpetas y duplicados</strong> ·
-            Versión 1.0.0 ·
-            Desarrollado por <strong>Yuri Octavio Urzua Lebuy</strong> ·
-            <a href="https://github.com/yuri19762008" target="_blank">
-                GitHub
-            </a>
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
 
 
 # Sección de limpieza de duplicados con doble candado de seguridad.
@@ -712,6 +658,7 @@ def render_delete_section(df: pd.DataFrame, dry_run: bool, protected_roots: List
             # Limpiamos la palabra de seguridad después del uso.
             if action_mode == "delete":
                 st.session_state["danger_confirm_text"] = ""
+
 
 
 # -------------------------------------------------------------------
@@ -832,7 +779,7 @@ def main() -> None:
     with st.expander("Ver recomendaciones de uso"):
         st.markdown(
             """
-            - Usa rutas absolutas de Windows, por ejemplo: `C:\\Usuarios\\tu_usuario\\tus_carpetas\\carpeta1`.
+            - Usa rutas absolutas de Windows, por ejemplo: `C:\\Usuarios\\Yuri\\Documents\\carpeta1`.
             - Si tienes miles de archivos, primero prueba con comparación por nombre y tamaño.
             - Luego activa hash para confirmar duplicados reales.
             - Mantén activado **dry run** antes de ejecutar cambios reales.
@@ -843,9 +790,54 @@ def main() -> None:
             """
         )
 
-    # Mostramos el footer fijo al final de la app.
-    render_footer()
+def render_footer() -> None:
+    st.markdown(
+        """
+        <style>
+            footer {visibility: hidden;}
+            .main > div {padding-bottom: 95px;}
 
+            .custom-footer {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                background: #111827;
+                color: #F3F4F6;
+                border-top: 1px solid rgba(255,255,255,0.10);
+                padding: 12px 20px;
+                text-align: center;
+                z-index: 999999;
+                box-shadow: 0 -3px 10px rgba(0,0,0,0.15);
+            }
+
+            .custom-footer a {
+                color: #34D399;
+                text-decoration: none;
+                font-weight: 600;
+            }
+
+            .custom-footer a:hover {
+                text-decoration: underline;
+            }
+
+            @media (max-width: 768px) {
+                .main > div {padding-bottom: 120px;}
+                .custom-footer {font-size: 12px;}
+            }
+        </style>
+
+        <div class="custom-footer">
+            📁 <strong>Comparador de carpetas y duplicados</strong> ·
+            Versión 1.0.0 ·
+            Desarrollado por <strong>Yuri Octavio Urzua Lebuy</strong> ·
+            <a href="https://github.com/TU-USUARIO/TU-REPOSITORIO" target="_blank">
+                GitHub
+            </a>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
 
 # Punto de entrada principal del programa.
 if __name__ == "__main__":
