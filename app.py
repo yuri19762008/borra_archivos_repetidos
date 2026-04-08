@@ -484,6 +484,9 @@ def render_header() -> None:
     st.title("📁 Comparador de carpetas en Windows")
     st.markdown(
         """
+        Creado por **Yuri Urzua Lebuy** | [GitHub](https://github.com/yuri19762008) 
+        """
+        """
         Esta aplicación compara dos carpetas, detecta archivos duplicados y permite limpiar duplicados de forma segura.
         La opción recomendada es mover archivos a la **Papelera de reciclaje** en vez de eliminarlos definitivamente.
         """
