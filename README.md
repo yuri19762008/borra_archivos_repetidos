@@ -1,3 +1,11 @@
+
+
+![Python](https://img.shields.io/badge/Python-3.10-3776AB?style=flat&logo=python&logoColor=white)
+
+![License](https://img.shields.io/badge/License-MIT-green?style=flat)
+
+
+
 #  Comparador de Carpetas — Guía de Instalación y Uso
 
 ##  Requisitos previos
