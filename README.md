@@ -73,7 +73,7 @@ Clic en **" Iniciar Comparación"**
 proyecto/
 ├── app.py                          ← Aplicación Streamlit (EJECUTAR ESTE)
 ├── comparador_carpetas.ipynb       ← Notebook Jupyter con explicaciones
-├── instrucciones.md                ← Este archivo
+├── README.md                       ← Este archivo
 └── comparador_carpetas.log         ← Log de eventos (auto-generado al correr)
 ```
 
